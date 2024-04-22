@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <section>
+        <h1>
+            Gets your Avatar by your name
+        </h1>
+        <div class="centerDiv">
+            <div class="details">
+                <label> Enter your name</label><br>
+                <input type="text" name="" id="nameid">
+            </div>
+            <div class="imgdiv">
+                <img src="D:\project-API uses\avatar.1433098.140x140.jpg" width="200" height="200" class="imgchange">
+            </div>
+
+            <button>click Me</button>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('button').click(function(){
+         const name = $('#nameid').val();
+         alert(name);
+         $(' .imgchange').attr('src',`https://joesch.moe/api/v1/${name}`);
+          const b = $('.imgchange');
+          console.log(b);
+        });
+    });
+</script>
+</body>
+</html>
